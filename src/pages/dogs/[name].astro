@@ -1,0 +1,29 @@
+---
+import type { GetStaticPaths } from "astro";
+  import BaseLayout from '../../layouts/BaseLayout.astro'
+  import Nav from '../../components/Nav.astro'
+
+   export const getStaticPaths = (() => {
+    
+    return [
+        {params:{name:'spupi'},props:{age:19}},
+        {params:{name:'pipo'}},
+        {params:{name:'nam 1'}}
+
+    ];
+  }) satisfies GetStaticPaths;
+
+
+  const {name}=Astro.params;
+
+  const props=Astro.props
+
+
+---
+<BaseLayout title="Dogs Page" >
+    
+     <Nav/>
+     
+     <h1>Name {name} </h1>
+
+</BaseLayout>

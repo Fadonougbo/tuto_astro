@@ -1,0 +1,25 @@
+---
+  import BaseLayout from '../layouts/BaseLayout.astro'
+  import Nav from '../components/Nav.astro'
+  import { Image } from 'astro:assets'
+
+  import pic1 from '../images/pic1.png'
+
+  
+---
+<BaseLayout title='About page'>
+    
+     <Nav/>
+     
+     <h1>About</h1>
+
+     <footer slot="about-footer">
+      About footer
+     </footer>
+
+     <Image src={pic1}  alt={'mypic'} layout='constrained'/>
+
+    <script is:inline>
+        console.log('about')
+     </script>
+</BaseLayout>

@@ -1,0 +1,24 @@
+---
+  import BaseLayout from '../layouts/BaseLayout.astro'
+  import Nav from '../components/Nav.astro'
+  import { Users,User } from '../components/react/Users';
+---
+<BaseLayout>
+    
+     <Nav/>
+     
+     <h1>FAQ</h1>
+
+
+      <Users name={'gaut'} client:load >
+        <header slot="header" >header</header>
+        <main>main</main>
+        <User client:idle />
+      </Users>
+
+
+     <script is:inline>
+      console.log('faq')
+     </script>
+     
+</BaseLayout>
