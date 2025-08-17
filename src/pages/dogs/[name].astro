@@ -6,11 +6,9 @@ import type { GetStaticPaths } from "astro";
    export const getStaticPaths = (() => {
     
     return [
-        {params:{name:'spupi'},props:{age:19}},
-        {params:{name:'pipo'}},
-        {params:{name:'nam 1'}}
-
+        {params:{name:'rant'},props:{age:19}}
     ];
+    
   }) satisfies GetStaticPaths;
 
 
@@ -23,7 +21,7 @@ import type { GetStaticPaths } from "astro";
 <BaseLayout title="Dogs Page" >
     
      <Nav/>
-     
+     <a href="#" data-></a>
      <h1>Name {name} </h1>
 
 </BaseLayout>

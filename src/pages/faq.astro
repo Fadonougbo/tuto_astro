@@ -2,6 +2,8 @@
   import BaseLayout from '../layouts/BaseLayout.astro'
   import Nav from '../components/Nav.astro'
   import { Users,User } from '../components/react/Users';
+
+
 ---
 <BaseLayout>
     
@@ -15,10 +17,5 @@
         <main>main</main>
         <User client:idle />
       </Users>
-
-
-     <script is:inline>
-      console.log('faq')
-     </script>
-     
+      
 </BaseLayout>
