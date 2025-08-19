@@ -10,15 +10,15 @@
     
      <Nav/>
      
-     <h1>About</h1>
+     <h1 transition:name="h1" transition:animate="slide">About</h1>
 
      <footer slot="about-footer">
       About footer
      </footer>
-
+      <form action="/faq" method="POST" data-astro-reload>
+        <button>submits</button>
+      </form>
      <Image src={pic1}  alt={'mypic'} layout='constrained'/>
 
-    <script is:inline>
-        console.log('about')
-     </script>
+
 </BaseLayout>

@@ -3,18 +3,17 @@
   import Nav from '../components/Nav.astro'
   import { Users,User } from '../components/react/Users';
 
-
 ---
 <BaseLayout>
     
      <Nav/>
      
-     <h1>FAQ</h1>
+     <h1 style={{color:'green'}} transition:name="h1"  transition:animate="slide">FAQ</h1>
 
 
       <Users name={'gaut'} client:load >
         <header slot="header" >header</header>
-        <main>main</main>
+        <main onclick="console.log('main')" style="color: green;" >main</main>
         <User client:idle />
       </Users>
       

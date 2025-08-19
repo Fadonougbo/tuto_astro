@@ -2,7 +2,6 @@ import { useState } from "react"
 
 
 export const Users=({name,children,header})=>{
-
     const [state,setState]=useState(0)
 
     const handleClick=()=>{

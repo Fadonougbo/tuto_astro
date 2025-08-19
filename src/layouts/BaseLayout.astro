@@ -16,16 +16,16 @@ import { ClientRouter } from "astro:transitions";
     <ClientRouter />
 
     <slot name="defaultassets" ></slot>
+
 </head>
 
-<body transition:animate="slide" >
+<body  >
 
     <slot name="about-footer" >
         footer non definis
     </slot>
 
     <slot />
-
 
 </body>
 </html>
