@@ -2,15 +2,21 @@
   import BaseLayout from '../layouts/BaseLayout.astro'
   import Nav from '../components/Nav.astro'
   import { Users,User } from '../components/react/Users';
+import { Debug } from 'astro:components';
+
+      console.log(import.meta.env.SECRET_MY_SECRET) 
 
 ---
 <BaseLayout>
     
-     <Nav/>
+     <Nav  />
      
      <h1 style={{color:'green'}} transition:name="h1"  transition:animate="slide">FAQ</h1>
 
+    <script>
+      console.log(import.meta.env.SECRET_MY_SECRET) 
 
+    </script>
       <Users name={'gaut'} client:load >
         <header slot="header" >header</header>
         <main onclick="console.log('main')" style="color: green;" >main</main>

@@ -1,0 +1,18 @@
+---
+import {Todo} from '../components/react/Todo.tsx'
+---
+
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Document</title>
+    </head>
+    <body>
+        <Todo client:only="react" data={"<div>DATA</div>"}>
+            <h1>Chilldren</h1>
+            <mark slot="mark" >Mark</mark>
+        </Todo>
+    </body>
+</html>

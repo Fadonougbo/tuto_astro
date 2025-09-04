@@ -11,5 +11,36 @@
     </head>
     <body>
         <h1>DOGS HOME</h1>
+
+
+        
+        <my-paragraph>
+            <span slot="my-text">Let's have some different text!</span>
+            <h1>test</h1>
+        </my-paragraph>
+        
+        <template id="custom-paragraph">
+            <p>
+                salut
+                <slot name="my-text">My default text</slot>
+                <slot></slot>
+            </p>
+        </template>
+        <script>
+            customElements.define(
+            "my-paragraph",
+            class extends HTMLElement {
+                constructor() {
+                super();
+                let template = document.getElementById("custom-paragraph");
+                let templateContent = template.content;
+
+                const shadowRoot = this.attachShadow({ mode: "open" });
+                    shadowRoot.appendChild(templateContent.cloneNode(true));
+                }
+            },
+            );
+        </script>
+        
     </body>
 </html>
